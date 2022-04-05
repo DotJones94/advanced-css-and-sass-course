@@ -59,6 +59,7 @@ are in relation to the parent*/
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 /*When there are elements within that are translating, there is a small shake from the parent,
@@ -68,6 +69,7 @@ so backface-visibility is hidden*/
     text-transform: uppercase;
 
     backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 
 /* When you want to set a span to be underneath each other, make them block instead of inline elements*/
@@ -122,4 +124,32 @@ so backface-visibility is hidden*/
         opacity: 1;
         transform: translate(0);
     }
+}
+
+/*Link is pseudo class for the anchor element and visited is when that element has been pressed before
+Also: links are inline elements which means any extra styling will overflow, inline-block keeps width but extra styling
+will not overflow
+Transition needs to be on the initial state, just facts*/
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+}
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.btn-white{
+    background-color: white;
+    color: #777777;
 }
