@@ -61,9 +61,13 @@ are in relation to the parent*/
     transform: translate(-50%, -50%);
 }
 
+/*When there are elements within that are translating, there is a small shake from the parent,
+so backface-visibility is hidden*/
 .heading-primary{
     color: #fff;
     text-transform: uppercase;
+
+    backface-visibility: hidden;
 }
 
 /* When you want to set a span to be underneath each other, make them block instead of inline elements*/
@@ -72,6 +76,10 @@ are in relation to the parent*/
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
 
 .heading-primary-sub{
@@ -79,4 +87,39 @@ are in relation to the parent*/
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 21.7px;
+
+    animation: moveInRight 1s ease-out;
+}
+
+/*For best browser performance, using only opacity and transform are desirable*/
+@keyframes moveInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80%{
+        transform: translateX(10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80%{
+        transform: translateX(-10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
 }
