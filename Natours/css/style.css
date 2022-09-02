@@ -53,19 +53,19 @@ Also: to get clip path pre-made shapes: https://bennettfeely.com/clippy/
 }
 
 /*The position of top/left are determined from parent who's position is set to relative */
-.logo-box{
+.header__logo-box{
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
 
-.logo{
+.header__logo{
     height: 3.5rem;
 }
 
 /*The transform element relates to the div itself where as the other position elements (top/left)
 are in relation to the parent*/
-.text-box{
+.header__text-box{
     position: absolute;
     top: 40%;
     left: 50%;
@@ -84,7 +84,7 @@ so backface-visibility is hidden*/
 }
 
 /* When you want to set a span to be underneath each other, make them block instead of inline elements*/
-.heading-primary-main{
+.heading-primary--main{
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -95,7 +95,7 @@ so backface-visibility is hidden*/
     animation-timing-function: ease-out;
 }
 
-.heading-primary-sub{
+.heading-primary--sub{
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -163,7 +163,7 @@ Transition needs to be on the initial state, just facts*/
     box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
 }
 
-.btn-white{
+.btn--white{
     background-color: white;
     color: #777777;
 }
@@ -183,7 +183,7 @@ Treated like a child of the element*/
     transition: all .4s;
 }
 
-.btn-white::after{
+.btn--white::after{
     background-color: white;
 }
 
@@ -205,7 +205,7 @@ Treated like a child of the element*/
 }
 
 /*The animation fill mode is used to set the state of the animation to 0% until the animation begins*/
-.btn-animated{
+.btn--animated{
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards;
 }
