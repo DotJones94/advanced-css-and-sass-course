@@ -1,0 +1,38 @@
+/*If you want something on top of your background image, or below, you put it before/after in the same background-image tag
+Also: to get clip path pre-made shapes: https://bennettfeely.com/clippy/
+*/
+.header{
+    height: 95vh;
+    background-image:
+            linear-gradient(to right bottom, rgba($color-primary-light,0.8), rgba($color-primary-dark,.8)),
+            url("../../img/hero.jpg");
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    //To follow BEM structure you can add '&' and it will grab the parent class name
+    /*The position of top/left are determined from parent who's position is set to relative */
+    &__logo-box{
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+
+    &__logo{
+        height: 3.5rem;
+    }
+
+    /*The transform element relates to the div itself where as the other position elements (top/left)
+    are in relation to the parent*/
+    &__text-box{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+

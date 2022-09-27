@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/*Putting root font-size to 10px makes it easier to convert other font-sizes to rem*/
+/*We changed from px to percentage because it will help accessibility (you will allow them change to the size to 10px if you don't allow it)
+we take 100% = 16px and made it 62.5% = 10px*/
+html{
+    font-size: 62.5%;
+}
+
+/*The reason for adding font here is to make use of inheritance for font styling*/
+body{
+    box-sizing: border-box;
+}
