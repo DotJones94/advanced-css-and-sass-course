@@ -1,7 +1,6 @@
 .row{
     //It is better to use max-width because then if the element is larger than then screen width it will automatically size down to 100% it can
     max-width: $grid-width;
-    background-color: #eee;
     //To get the contents to be fit in the middle of floats
     margin: 0 auto;
 
@@ -14,7 +13,6 @@
 
     //This will select all items where the class starts with 'col-'
     [class^="col-"]{
-        background-color: orangered;
         float: left;
 
         &:not(:last-child){

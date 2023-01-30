@@ -16,7 +16,8 @@
     "url": "https://github.com/DotJones94/advanced-css-and-sass-course/issues"
   },
   "homepage": "https://github.com/DotJones94/advanced-css-and-sass-course#readme",
-  "devDependencies": {
-    "node-sass": "^7.0.3"
+  "dependencies": {
+    "node-sass": "^8.0.0",
+    "sass": "^1.57.1"
   }
 }
