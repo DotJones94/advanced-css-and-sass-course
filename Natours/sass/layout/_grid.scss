@@ -14,7 +14,6 @@
     //This will select all items where the class starts with 'col-'
     [class^="col-"]{
         float: left;
-        background: lightblue;
 
         &:not(:last-child){
             margin-right: $gutter-horizontal;
