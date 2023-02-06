@@ -182,7 +182,8 @@ Also: to get clip path pre-made shapes: https://bennettfeely.com/clippy/
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    float: left; }
+    float: left;
+    background: lightblue; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
   .row .col-1-of-2 {
