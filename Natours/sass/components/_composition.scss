@@ -1,0 +1,40 @@
+.composition{
+    position: relative;
+    &__photo{
+        width: 55%;
+        box-shadow: 0 1.5rem 4rem rgba(black, 0.4);
+        border-radius: 2px;
+        position: absolute;
+        z-index: 10;
+        transition: all 0.4s ease-in-out;
+        //To allow there to be a border with a padding in between
+        outline-offset: 2rem;
+
+        &--p1{
+            left: 0;
+            top: -2rem;
+        }
+
+        &--p2{
+            right: 0;
+            top: 2rem;
+        }
+
+        &--p3{
+            left: 20%;
+            top: 10rem;
+        }
+
+        &:hover{
+            outline: 1rem solid $color-primary;
+            transform: scale(1.05) translateY(5px);
+            box-shadow: 0 2.5rem 4rem rgba(black, 0.5);
+            z-index: 20;
+        }
+    }
+
+    //This will select all the photos (when the parent is hovered) that are not being hovered.
+    &:hover &__photo:not(:hover){
+        transform: scale(0.95);
+    }
+}
